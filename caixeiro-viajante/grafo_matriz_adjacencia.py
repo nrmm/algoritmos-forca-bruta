@@ -12,11 +12,11 @@ class GrafoMatrizAdjacencia:
         self.matriz[u][v] = 0
         self.matriz[v][u] = 0
 
-    # FIXME: ajustar para arestas com peso.
     def grau(self, v):
         grau = 0
         for i in range(self.qtde_vertices):
-            grau += self.matriz[v][i]
+            if self.matriz[v][i] > 0:
+                grau += 1
         return grau
 
     def numero_vertices(self):
