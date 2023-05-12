@@ -12,6 +12,7 @@ def encontre_ciclo_hamiltoniano_com_custo_minimo(grafo, vertice_inicial):
     for permutacao in itertools.permutations(conjunto_vertices, n - 1):
         ciclo = (vertice_inicial,) + permutacao + (vertice_inicial,)
         custo = 0
+        # Verifica adjacências.
         for i in range(len(ciclo) - 1):
             u = ciclo[i]
             v = ciclo[i + 1]
